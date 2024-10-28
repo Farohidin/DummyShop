@@ -1,0 +1,27 @@
+@import './common/fond.scss', './common/common.scss', './common/nav.scss', './common/Sidebar.scss', '../../Components/Product/Product.scss',
+'../../pages/Single.scss', '../../Components/Paginate/Paginate.scss';
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #008080;
+    border-radius: 5px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
+}
+
+.sevimli{
+    display: flex;
+    justify-content: center;
+    
+}

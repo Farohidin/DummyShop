@@ -1,0 +1,37 @@
+
+
+.paginate{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    left: 0;
+    justify-content: center;
+    gap: 15px;
+    font-size: 25px;
+    backdrop-filter: blur(10px);
+    &_link{
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px solid #008080;
+        cursor: pointer;
+        background-color: rgb(128, 128, 128, 0.3);
+        color: #008080;
+    }
+    &_active{
+        background-color: #008080;
+        color: #fff;
+    }
+    &_btn{
+        color: #008080;
+    }
+    &_break{
+        color: #008080;
+    }
+}

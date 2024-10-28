@@ -1,0 +1,177 @@
+@import './media.scss';
+
+.sidebar {
+
+  &_title {
+    display: block;
+    width: 200px;
+    margin: 20px 0 20px 0;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: rgb(243, 230, 230);
+    box-shadow: 0 0 40px 20px rgb(198, 193, 193);
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    color: #008080;
+
+    @include media(1000) {
+      width: 150px;
+    }
+
+    @include media(800) {
+
+      display: none;
+    }
+
+    @include media(500) {}
+  }
+
+  &_box {
+    display: flex;
+    gap: 20px;
+
+    @include media(800) {
+      flex-direction: column-reverse;
+    }
+
+    @include media(560) {
+      gap: 1px;
+    }
+
+    &_tul {
+      margin-bottom: 20px;
+    }
+
+    &_ul {
+      width: 200px;
+      background-color: rgb(243, 230, 230);
+      padding: 10px 20px;
+      padding-bottom: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 40px 20px rgb(198, 193, 193);
+      max-height: calc(8 * 50px);
+      overflow-y: auto;
+
+      @include media(1000) {
+        width: 150px;
+      }
+
+      @include media(800) {
+        width: 100%;
+        flex-direction: row;
+        padding: 10px;
+      }
+
+      @include media(560) {
+        overflow-x: auto;
+        white-space: nowrap;
+
+        &::-webkit-scrollbar {
+          height: 1px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #888;
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: #555;
+        }
+
+      }
+
+      @include media(500) {
+        margin: 15px 0 0 0;
+      }
+
+
+      &_link {
+        color: #008080;
+        background-color: #FFF;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 15px;
+        transition: 0.5s;
+
+        @include media(500) {
+          font-size: 15px;
+        }
+
+        &:hover {
+          box-shadow: 0 0 40px 20px rgb(198, 193, 193);
+          background-color: #008080;
+          color: #FFF;
+
+          a {
+            color: #FFF;
+          }
+        }
+
+        a {
+          color: white;
+        }
+
+      }
+    }
+
+  }
+}
+
+
+
+
+.swiper {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+
+  @include media(700) {
+    height: 300px;
+  }
+
+  @include media(550) {
+    height: 250px;
+  }
+
+  @include media(400) {
+    height: 200px;
+  }
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+
+}
+
+.swiperSlide {
+  background-color: rgb(255, 255, 255) !important;
+  border: 5px solid #008080 !important;
+}
+
+.swiper-slide img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 10px !important;
+}
+
+
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 3px !important;
+  border-radius: 3px !important;
+  background-color: white;
+  opacity: 0.7;
+
+  &-active {
+    background-color: #008080 !important;
+  }
+}
