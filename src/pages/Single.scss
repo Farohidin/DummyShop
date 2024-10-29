@@ -79,20 +79,21 @@
         @include media(1050) {
             padding: 20px 40px;
             gap: 40px;
+            height: 350px;
         }
         @include media(900) {
             padding: 20px 30px;
             gap: 0;
-            height: 450px;
+            height: 370px;
             margin:0;
         }
          @include media(800) {
-            height: 400px;
-            width: 450px;
+            height: 350px;
+            width: 500px;
         }
-         @include media(650) {
-            height: 300px;
-            width: 400px;
+         @include media(670) {
+            height: 315px;
+            width: 450px;
         }
         @include media(500) {
             height: 250px;
@@ -107,6 +108,7 @@
             
         }
         &_serd {
+            display: flex;
             justify-content: center;
             align-items: center;
             position: absolute;
@@ -116,7 +118,23 @@
             color: red;
             z-index: 1;
         }
-
+        &_stock{
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            font-size: 18px;
+            color: #008080;
+            border: 1px solid #008080 ;
+            padding: 5px;
+            border-radius: 10px;
+            @include media(870) {
+                   
+            }
+        }
         &_img {
             flex: 1;
             width: 100%;
@@ -140,13 +158,14 @@
     &_cardr {
         display: flex;
         flex-direction: column;
+        position: relative;
         @include media(500){
             flex-direction: row;
         }
         &_tx{
             display: flex;
             flex-direction: column; 
-            justify-content: center;
+            margin-top: 30px;
              @include media(500) {
                 
             }
@@ -157,28 +176,52 @@
             color: #008080;
             font-weight: 700;
             font-size: 35px;
-            @include media(600) {
-                 font-size: 30px;
+            @include media(700) {
+                 font-size: 31px;
             }
-             @include media(500) {
+             @include media(600) {
                 font-size: 27px;
             }
+            @include media(500) {
+                font-size: 23px;
+                
+            }
             @include media(400) {
-                font-size: 24px;
+                font-size: 19px;
             }
         }
 
         &_text {
             margin: 0 0 0px 10px;
-            font-size: 20px;
+            font-size: 23px;
             text-align: start;
             font-weight: 700;
+            background-color:antiquewhite;
+            
+            padding: 10px;
+            overflow: unset;
+            border-radius: 10px;
             color: #008080;
+             @include media(700) {
+                 text-align: justify;
+                 display: -webkit-box;
+                 -webkit-line-clamp: 4;
+                 -webkit-box-orient: vertical;
+                 overflow-y: scroll;
+            }
              @include media(600) {
-                 font-size: 15px;
+                 font-size: 20px;
+            }
+             @include media(500) {
+                text-align:start;
+                 font-size: 18px;
+                 display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical;
+                overflow-y: scroll;
             }
              @include media(400) {
-                 font-size: 10px;
+                 font-size: 13px;
             }
         }
 
@@ -186,15 +229,16 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center;
             margin: 20px 0 20px 10px;
             border-radius: 10px;
             padding: 10px;
             width: fit-content;
-             @include media(900) {
+             @include media(1000) {
                 margin: 10px 0 10px 5px;
             }
              @include media(500) {
-                flex-direction: unset;
+                
             }
             
             &_price {
@@ -202,18 +246,20 @@
                 font-size: 30px;
                 text-align: center;
                 color: #008080;
-      
                 span {
                     color: #008080;
-                    padding-left: 5px;
-                    
+                    padding-left: 5px; 
                 }
                 @include media(600) {
-                    font-size: 27px;
+                    font-size: 26px;
                 }
-                @include media(600) {
-                    font-size: 24px;
+                @include media(500) {
+                    font-size: 22px;
                 }
+                @include media(400) {
+                    font-size: 18px;
+                }
+                
             }
             &_inc{
                 display: flex;
@@ -221,7 +267,7 @@
                 gap: 20px;
                 padding: 20px;
                 align-items: center;
-                 @include media(900) {
+                 @include media(1000) {
                     gap: 15px;
                     padding: 15px;
                 }
@@ -270,17 +316,19 @@
                 }
                 
             }
-            &_btn {
+            &_btn { 
                 font-size: 30px;
                 background-color: rgb(243, 230, 230);
-                padding: 10px 30px;
+                padding: 10px 20px;
                 border-radius: 20px;
                 color:#008080 ;
                 border: 1px solid #008080;
                 transition: 0.5s;
-                @include media(900) {
-                    padding: 5px 20px;
+                width: 300px;
+                @include media(1000) {
+                    padding: 10px 20px;
                     font-size: 28px;
+                    width: 100%;
                 }
                 @include media(900) {
                     padding: 5px 2  0px;

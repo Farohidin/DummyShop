@@ -7,7 +7,7 @@ import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { useGetCategoryListQuery } from "../app/api/dummyDataApi";
 import { useDispatch, useSelector } from "react-redux";
 import { selectedBannerCategoryImg } from "../app/features/BannerSlice";
-
+import { IoArrowBackCircleSharp } from "react-icons/io5";
 const Saidbar = ({ setCategory }) => {
   const { data, isError, isLoading } = useGetCategoryListQuery();
 
@@ -29,6 +29,11 @@ const Saidbar = ({ setCategory }) => {
         <div className="sidebar_box">
           <div className="sidebar_box_tul">
             <ul className="sidebar_box_ul">
+              <span className="sidebar_box_ul_bk" 
+              onClick={() => handleCategory("")}> 
+                  <IoArrowBackCircleSharp />
+                  All Products
+              </span>
               {isLoading ? (
                 <>Loading...</>
               ) : (

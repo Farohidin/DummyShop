@@ -35,7 +35,6 @@ const SingleProduct = () => {
 
   return (
     <div className="container">
-      <span>Stock: {data.stock}</span>
       <div>
         <div className="single_box">
           <div className="single_box_cardl">
@@ -55,18 +54,15 @@ const SingleProduct = () => {
                 className="single_box_cardm_img"
                 src={mainFoto ? mainFoto : data.thumbnail}
                 alt=""
+                
               />
-
-              <p className="single_box_cardm_price">
-                1X:<span>$</span>
-                {data.price}
+              <p className="single_box_cardm_price">1X:<span>$</span>
+                  {data.price}
               </p>
-              <button
-                className="single_box_cardm_serd"
-                aria-label="Add to favorites"
-              >
+              <button className="single_box_cardm_serd" aria-label="Add to favorites">
                 <CgHeart />
               </button>
+                <span className="single_box_cardm_stock">Stock: {data.stock}</span>
             </div>
 
             <div className="single_box_cardr">
